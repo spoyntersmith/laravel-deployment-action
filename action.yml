@@ -94,7 +94,7 @@ runs:
         node-version: 16.14
 
     - name: Cache Node Modules
-      if: steps.node-cache.outputs.cache-hit != 'true'
+      if: steps.check_npm_file.outputs.files_exists == 'true' && steps.node-cache.outputs.cache-hit != 'true'
       id: node-cache
       uses: actions/cache@v2
       with:
