@@ -65,14 +65,14 @@ runs:
       uses: andstor/file-existence-action@v1.1.0
       with:
         files: "package.json"
-        allow_failure: true
+        allow_failure: false
 
     - name: Composer File Exists
       id: check_composer_file
       uses: andstor/file-existence-action@v1.1.0
       with:
         files: "composer.json"
-        allow_failure: true
+        allow_failure: false
 
     - name: Cache Composer dependencies
       if: steps.check_composer_file.outputs.files_exists == 'true'
