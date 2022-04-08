@@ -27,6 +27,7 @@ inputs:
     required: false
   COMPOSER_COMMAND:
     description: 'composer command - defaults to "composer install --no-progress --optimize-autoloader"'
+    required: false
     default: composer install --no-progress --optimize-autoloader
   BUILD_COMMAND:
     description: 'npm build command - defaults to "npm run dev"'
